@@ -1,291 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-        <title>Evan Greer Portfolio</title>
-        <link rel="stylesheet" href="style.css"/>
-        <link rel="stylesheet" href="mediaqueries.css"/>
-    </head>
-    <body>
-        <nav id="desktop-nav">
-            <div class="logo">Evan Greer</div>
-            <div>
-                <ul class="nav-links">
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Evan Greer — Mobile Developer specializing in cross-platform apps and SDK integration." />
+    <title>Evan Greer — Mobile Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header class="nav" id="nav">
+        <a href="#top" class="nav__logo">EG<span>.</span></a>
+        <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+        <nav class="nav__links" id="navLinks">
+            <a href="#about">About</a>
+            <a href="#experience">Experience</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+            <a href="./assets/resume.pdf" class="nav__resume" target="_blank" rel="noopener">Résumé</a>
         </nav>
-        <nav id="hamburger-nav">
-            <div class="logo">Evan Greer</div>
-            <div class="hamburger-menu">
-                <div class="hamburger-icon" onclick="toggleMenu()">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+    </header>
+
+    <main id="top">
+        <!-- HERO -->
+        <section class="hero" id="hero">
+            <div class="hero__text reveal">
+                <p class="eyebrow">Hello, I'm Evan Greer</p>
+                <h1 class="hero__title">Mobile developer building <span class="grad">cross-platform</span> experiences.</h1>
+                <p class="hero__lead">
+                    Nearly 5 years shipping Android, iOS, and React Native SDKs at scale —
+                    turning messaging channels, push, and backend integrations into products people actually engage with.
+                </p>
+                <div class="hero__actions">
+                    <a href="#projects" class="btn btn--primary">View my work</a>
+                    <a href="./assets/resume.pdf" class="btn btn--ghost" target="_blank" rel="noopener">Download résumé</a>
                 </div>
-                <div class="menu-links">
-                    <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                    <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                    <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                    <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                <div class="hero__socials">
+                    <a href="https://linkedin.com/in/evantk91" target="_blank" rel="noopener" aria-label="LinkedIn">
+                        <img src="./assets/linkedin.png" alt="" /></a>
+                    <a href="https://github.com/evantk91" target="_blank" rel="noopener" aria-label="GitHub">
+                        <img src="./assets/github.png" alt="" /></a>
+                    <a href="mailto:etgreer91@gmail.com" aria-label="Email">
+                        <img src="./assets/email.png" alt="" /></a>
                 </div>
             </div>
-        </nav>
-        <section id="profile">
-            <div class="section__pic-container">
-                <img src="./assets/headshot_circle.png" alt="Evan Greer Profile Picture">
-            </div>
-            <div class="section__text">
-                <p class="section__text__p1">Hello, I'm</p>
-                <h1 class="title">Evan Greer</h1>
-                <p class="section__text__p2">Mobile Developer</p>
-                <div class="btn-container">
-                    <button
-                      class="btn btn-color-2"
-                      onclick="window.open('./assets/resume.pdf')"
-                    >Download Resume</button>
-                    <button
-                      class="btn btn-color-1"
-                      onclick="location.href='./#contact'"
-                    >Contact Info</button>
+            <div class="hero__portrait reveal">
+                <div class="portrait-ring">
+                    <img src="./assets/headshot_circle.png" alt="Portrait of Evan Greer" />
                 </div>
-                <div id="socials-container">
-                    <img
-                       src="./assets/linkedin.png"
-                       alt="My LinkedIn Profile"
-                       class="icon"
-                       onclick="location.href='https://linkedin.com/in/evantk91'"
-                    />
-                    <img
-                       src="./assets/github.png"
-                       alt="My Github profile"
-                       class="icon"
-                       onclick="location.href='https://github.com/evantk91'"
-                    />
+                <span class="portrait-badge">📍 Denver, CO</span>
+            </div>
+        </section>
+
+        <!-- ABOUT -->
+        <section class="section" id="about">
+            <div class="section__head reveal">
+                <p class="eyebrow">Get to know more</p>
+                <h2 class="section__title">About me</h2>
+            </div>
+            <div class="about">
+                <div class="about__lead reveal">
+                    <p>
+                        I'm a software engineer who found his way into mobile from a background in mechanical
+                        engineering — and I bring that same systems-thinking to shipping SDKs.
+                    </p>
+                    <p>
+                        At Iterable I owned the Android SDK end-to-end while supporting React Native and iOS,
+                        drove features from design through execution, and made backend contributions across
+                        SMS, WhatsApp, and push. I like the messy edges: integration, activation, data-center
+                        rollouts, and the testing that makes a release boring in the best way.
+                    </p>
+                </div>
+                <div class="about__stats">
+                    <div class="stat-card reveal">
+                        <span class="stat-card__num">5<span>yrs</span></span>
+                        <span class="stat-card__label">Cross-platform mobile development</span>
+                    </div>
+                    <div class="stat-card reveal">
+                        <span class="stat-card__num">3</span>
+                        <span class="stat-card__label">Platforms shipped: Android, iOS, React Native</span>
+                    </div>
+                    <div class="stat-card reveal">
+                        <span class="stat-card__num">2</span>
+                        <span class="stat-card__label">Engineering degrees, UC San Diego &amp; UH Mānoa</span>
+                    </div>
                 </div>
             </div>
         </section>
-        <section id="about">
-            <p class="section__text__p1">Get To Know More</p>
-            <h1 class="title">About Me</h1>
-            <div class="section-container">
-                <div class="section__pic-container">
-                    <img
-                        src="./assets/profile-pic.png"
-                        alt="Profile picture"
-                        class="about-pic"
-                    />
-                </div>
-                <div class="about-details-container">
-                    <div class="about-containers">
-                        <div class="details-container">
-                            <img
-                              src="./assets/experience.png"
-                              alt="experience icon"
-                              class="icon"
-                            />
-                            <h3>Experience</h3>
-                            <p>4+ years <br/>Mobile Development</p>
+
+        <!-- EXPERIENCE -->
+        <section class="section" id="experience">
+            <div class="section__head reveal">
+                <p class="eyebrow">Where I've been</p>
+                <h2 class="section__title">Experience</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="tl-item reveal">
+                    <div class="tl-marker"></div>
+                    <div class="tl-body">
+                        <div class="tl-top">
+                            <h3>Software Engineer</h3>
+                            <span class="tl-date">Jun 2021 — May 2026</span>
                         </div>
-                        <div class="details-container">
-                            <img
-                              src="./assets/education.png"
-                              alt="Education icon"
-                              class="icon"
-                            />
-                            <h3>Education</h3>
-                            <p>B. Sc. Mechanical Engineering, University of Hawaii at Manoa</p>
-                            <p>M. Sc. Mechanical Engineering, University of California San Diego</p>
-                        </div>
+                        <p class="tl-org">Iterable</p>
+                        <p class="tl-desc">
+                            Directed projects from design through execution — embedded messaging, anonymous user
+                            activation, and European Data Center integration. Owned the Android SDK while supporting
+                            React Native and iOS, and made backend contributions across SMS, WhatsApp, and push.
+                        </p>
+                        <ul class="tl-list">
+                            <li>Spearheaded the embedded messaging channel, improving user engagement.</li>
+                            <li>Championed Android SDK development with seamless cross-platform integration.</li>
+                            <li>Led backend enhancements for SMS and push, streamlining communication.</li>
+                        </ul>
                     </div>
-                    <div class="text-container">
-                        <p>
-                            Dynamic Software Engineer with nearly 5 years of expertise in cross-platform application development and
-                            SDK integration. Spearheaded projects enhancing mobile user engagement through projects across various
-                            messaging channels and collaborative agile practices. Championed Android SDK development, ensuring
-                            robust integration with backend services like SMS and push notifications. Strong problem-solving skills
-                            complemented by a proven track record of optimizing mobile feature testing and driving successful project
-                            alignment.
+                </div>
+
+                <div class="tl-item reveal">
+                    <div class="tl-marker"></div>
+                    <div class="tl-body">
+                        <div class="tl-top">
+                            <h3>Mechanical Engineer</h3>
+                            <span class="tl-date">May 2016 — Dec 2019</span>
+                        </div>
+                        <p class="tl-org">AMEL Technologies Inc.</p>
+                        <p class="tl-desc">
+                            Engineered solutions for mechanical systems and worked across cross-functional teams to
+                            keep projects aligned and moving — the problem-solving foundation I still lean on daily.
                         </p>
                     </div>
                 </div>
-            </div>
-            <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#experience'">
-        </section>
-        <section id="experience">
-            <p class="section__text__p1">Explore My</p>
-            <h1 class="title">Experience</h1>
-            <div class="experience-details-container">
-                <div class="about-containers">
-                    <div class="details-container">
-                        <h2 class="experience-sub-title">Mobile Development</h2>
-                        <div class="article-container">
-                            <article>
-                                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
-                                <div>
-                                    <h3>Android Development</h3>
-                                    <p>Expert</p>
-                                </div>
-                            </article>
-                            <article>
-                                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
-                                <div>
-                                    <h3>iOS Development</h3>
-                                    <p>Expert</p>
-                                </div>
-                            </article>
-                            <article>
-                                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
-                                <div>
-                                    <h3>React Native</h3>
-                                    <p>Expert</p>
-                                </div>
-                            </article>
-                            <article>
-                                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
-                                <div>
-                                    <h3>SDK Development</h3>
-                                    <p>Expert</p>
-                                </div>
-                            </article>
-                            <article>
-                                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
-                                <div>
-                                    <h3>Kotlin</h3>
-                                    <p>Experienced</p>
-                                </div>
-                            </article>
-                            <article>
-                                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
-                                <div>
-                                    <h3>Swift</h3>
-                                    <p>Experienced</p>
-                                </div>
-                            </article>
+
+                <div class="tl-item reveal">
+                    <div class="tl-marker"></div>
+                    <div class="tl-body">
+                        <div class="tl-top">
+                            <h3>Software Engineering Immersive</h3>
+                            <span class="tl-date">Dec 2019 — Apr 2020</span>
                         </div>
-                    </div>
-                    <div class="details-container">
-                        <h2 class="experience-sub-title">Engineering & Process</h2>
-                        <div class="article-container">
-                            <article>
-                                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
-                                <div>
-                                    <h3>RESTful APIs</h3>
-                                    <p>Expert</p>
-                                </div>
-                            </article>
-                            <article>
-                                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
-                                <div>
-                                    <h3>Agile Methodologies</h3>
-                                    <p>Expert</p>
-                                </div>
-                            </article>
-                            <article>
-                                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
-                                <div>
-                                    <h3>SMS &amp; Push Channels</h3>
-                                    <p>Experienced</p>
-                                </div>
-                            </article>
-                            <article>
-                                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
-                                <div>
-                                    <h3>Backend Integration</h3>
-                                    <p>Experienced</p>
-                                </div>
-                            </article>
-                            <article>
-                                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
-                                <div>
-                                    <h3>Jira &amp; Kanban</h3>
-                                    <p>Experienced</p>
-                                </div>
-                            </article>
-                            <article>
-                                <img src="./assets/checkmark.png" alt="Experience icon" class="icon"/>
-                                <div>
-                                    <h3>Cross-functional Collaboration</h3>
-                                    <p>Expert</p>
-                                </div>
-                            </article>
-                        </div>
+                        <p class="tl-org">Flatiron School — Denver, CO</p>
                     </div>
                 </div>
             </div>
-            <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'">
-        </section>
-        <section id="projects">
-            <p class="section__text__p1">Browse My Recent</p>
-            <h1 class="title">Projects</h1>
-            <div class="experience-details-container">
-                <div class="about-containers">
-                    <div class="details-container color-container">
-                        <div class="article-container">
-                            <img src="./assets/project-1.png" alt="Project 1" class="project-img"/>
-                        </div>
-                        <h2 class="experience-sub-title project-title">Project One</h2>
-                        <div class="btn-container">
-                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/evantk91'">Github</button>
-                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/evantk91'">Live Demo</button>
-                        </div>
-                    </div>
-                    <div class="details-container color-container">
-                        <div class="article-container">
-                            <img src="./assets/project-2.png" alt="Project 2" class="project-img"/>
-                        </div>
-                        <h2 class="experience-sub-title project-title">Project Two</h2>
-                        <div class="btn-container">
-                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/evantk91'">Github</button>
-                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/evantk91'">Live Demo</button>
-                        </div>
-                    </div>
-                    <div class="details-container color-container">
-                        <div class="article-container">
-                            <img src="./assets/project-3.png" alt="Project 3" class="project-img"/>
-                        </div>
-                        <h2 class="experience-sub-title project-title">Project Three</h2>
-                        <div class="btn-container">
-                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/evantk91'">Github</button>
-                            <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/evantk91'">Live Demo</button>
-                        </div>
-                    </div>
+
+            <div class="skills reveal">
+                <h3 class="skills__title">Toolbox</h3>
+                <div class="chips">
+                    <span class="chip chip--expert">Android Development</span>
+                    <span class="chip chip--expert">iOS Development</span>
+                    <span class="chip chip--expert">React Native</span>
+                    <span class="chip chip--expert">SDK Development</span>
+                    <span class="chip chip--expert">RESTful APIs</span>
+                    <span class="chip chip--expert">Agile Methodologies</span>
+                    <span class="chip">Kotlin</span>
+                    <span class="chip">Swift</span>
+                    <span class="chip">SMS &amp; Push Channels</span>
+                    <span class="chip">Jira &amp; Kanban</span>
                 </div>
-            </div>
-            <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#contact'">
-        </section>
-        <section id="contact">
-            <p class="section__text__p1">Get in Touch</p>
-            <h1 class="title">Contact Me</h1>
-            <div class="contact-info-upper-container">
-                <div class="contact-info-container">
-                    <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon"/>
-                    <p><a href="mailto:etgreer91@gmail.com">etgreer91@gmail.com</a></p>
-                </div>
-                <div class="contact-info-container">
-                    <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon"/>
-                    <p><a href="https://linkedin.com/in/evantk91">LinkedIn</a></p>
-                </div>
+                <p class="skills__key"><span class="dot"></span> Expert &nbsp;·&nbsp; <span class="dot dot--muted"></span> Experienced</p>
             </div>
         </section>
-        <footer>
-            <nav>
-                <div class="nav-links-container">
-                    <ul class="nav-links">
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#experience">Experience</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#contact">Contact</a></li>
+
+        <!-- PROJECTS -->
+        <section class="section" id="projects">
+            <div class="section__head reveal">
+                <p class="eyebrow">Selected work</p>
+                <h2 class="section__title">Projects</h2>
+                <p class="section__sub">Highlights from my time owning mobile SDKs at Iterable.</p>
+            </div>
+
+            <div class="cards">
+                <article class="card reveal">
+                    <div class="card__glyph">💬</div>
+                    <h3>Embedded Messaging</h3>
+                    <p>Led a new in-app messaging channel from design to launch, lifting user engagement across mobile surfaces.</p>
+                    <ul class="tags">
+                        <li>Android SDK</li><li>iOS</li><li>React Native</li>
                     </ul>
+                    <div class="card__links">
+                        <a href="https://github.com/evantk91" target="_blank" rel="noopener">GitHub ↗</a>
+                    </div>
+                </article>
+
+                <article class="card reveal">
+                    <div class="card__glyph">🌍</div>
+                    <h3>European Data Center</h3>
+                    <p>Integrated EU data-center support across the SDK suite so customers could route data regionally with confidence.</p>
+                    <ul class="tags">
+                        <li>SDK</li><li>Backend</li><li>Compliance</li>
+                    </ul>
+                    <div class="card__links">
+                        <a href="https://github.com/evantk91" target="_blank" rel="noopener">GitHub ↗</a>
+                    </div>
+                </article>
+
+                <article class="card reveal">
+                    <div class="card__glyph">🔑</div>
+                    <h3>Anonymous User Activation</h3>
+                    <p>Built anonymous-to-known user activation, letting apps personalize before sign-in and convert more users.</p>
+                    <ul class="tags">
+                        <li>Kotlin</li><li>Swift</li><li>REST</li>
+                    </ul>
+                    <div class="card__links">
+                        <a href="https://github.com/evantk91" target="_blank" rel="noopener">GitHub ↗</a>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section class="section section--contact" id="contact">
+            <div class="contact reveal">
+                <p class="eyebrow">Get in touch</p>
+                <h2 class="section__title">Let's build something.</h2>
+                <p class="contact__lead">
+                    Open to mobile and SDK roles. The fastest way to reach me is email — I usually reply within a day.
+                </p>
+                <div class="contact__actions">
+                    <a href="mailto:etgreer91@gmail.com" class="btn btn--primary">etgreer91@gmail.com</a>
+                    <a href="https://linkedin.com/in/evantk91" class="btn btn--ghost" target="_blank" rel="noopener">Connect on LinkedIn</a>
                 </div>
-            </nav>
-            <p>Copyright &#169; 2026 Evan Greer. All Rights Reserved.</p>
-        </footer>
-        <script src="script.js"></script>
-    </body>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <span>© 2026 Evan Greer</span>
+        <a href="#top">Back to top ↑</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
 </html>
