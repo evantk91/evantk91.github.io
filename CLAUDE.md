@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-A single-page personal portfolio for Evan Greer — a modern, dark-themed site built with plain, static **HTML, CSS, and vanilla JavaScript**. No build step, package manager, bundler, framework, or test suite; files are served as-is. Content is drawn from Evan's résumé (`assets/resume.pdf`). Deployed via **GitHub Pages** from `main` at https://evantk91.github.io/.
+A single-page personal portfolio for Evan Greer — a modern, dark-themed site built with plain, static **HTML, CSS, and vanilla JavaScript**. No build step, package manager, bundler, framework, or test suite; files are served as-is. Content is drawn from Evan's résumé (`assets/resume.pdf`). Deployed via **GitHub Pages** from `main` at https://www.evan-greer.co/ (custom domain set via the `CNAME` file; the repo is `evantk91.github.io` on GitHub, which also still resolves).
 
 ## Running / developing
 
